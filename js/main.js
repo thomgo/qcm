@@ -15,9 +15,11 @@ $( document ).ready(function() {
   // Clear the radio button
   $("input").prop('checked', false);
 
-  // Add the value as text after the input to avoid to copy it in html
+  // Add the value as text after the input to avoid to copy it in html and clear tags
   $("input").each(function(){
-    $(this).after(" " + $(this).val() + "<br>");
+    var answerContent = $(this).val().replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    answerContent = " " + answerContent + "<br>";
+    $(this).after(answerContent);
   });
 
   // Add the light icon to make HTML lighter
@@ -71,7 +73,7 @@ $( document ).ready(function() {
           var advice;
 
           if (godAnswer<50) {
-            advice = "Oups il semble que plusieurs notions vous aient échappé, il faut continuer à travailler";
+            advice = "Il semble que plusieurs notions importantes ne soient pas comprises, il faut continuer à travailler";
           }
           else if (godAnswer >= 50 && godAnswer<75) {
             advice = "Les bases sont acquises mais il faudrait peut-être relire quelques chapitres";
@@ -82,19 +84,6 @@ $( document ).ready(function() {
           else {
             advice = "Parfait rien ne vous a échappé foncez vers la suite";
           }
-          // switch (godAnswer) {
-          //   case (godAnswer<50):
-          //     advice = "Oups il semble que plusieurs notions vous aient échappé, il faut continuer à travailler";
-          //     break;
-          //   case (godAnswer>=50 && godAnswer<= 75):
-          //     advice = "Les bases sont acquises mais il faudrait peut-être relire quelques chapitres";
-          //     break;
-          //   case (godAnswer>=75):
-          //     advice = "Très bon score vous êtes prêt pour la suite";
-          //     break;
-          //   // default:
-          //   //   advice = "Parfait vous êtes prêt pour la suite";
-          // }
 
           alert("Test fini vous avez bien répondu à " + godAnswer + "% des questions. " + advice);
           location.reload();
