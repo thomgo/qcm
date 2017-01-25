@@ -94,36 +94,59 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-html {
-  height: 100%;
-}
+   .blueback {
+       background-color: #090446;
+       color: white;
+     }
 
-body {
-  height: 100%;
-}
+     button {
+       color: #090446;
+       font-size: 1.2em;
+       font-weight: bold;
+       border: 2px solid #090446;
+       border-radius: 2px;
+       background-color: white;
+       margin-bottom: .5em;
+     }
 
-.slider {
-  width: 500px;
-  height: 250px;
-  margin-top: 3%;
-  border: 5px solid black;
-}
 
-.slider img {
-  width: 100%;
-  height: 100%;
-}
+       button:hover {
+         background-color: #090446;
+         color: white;
+       }
 
-.test {
-  margin-top: 5%;
-}
+     .question p {
+       font-size: 2em;
+     }
 
-.remove {
-  width: 500px;
-  height: 300px;
-  background-color: red;
-}
+     .question input {
+       margin: 1em 0;
+     }
 
+     .question .result, .question .explaination {
+       font-size: 1.5em;
+     }
+
+     .good {
+       background-color: #3f7d20;
+     }
+
+     .bad {
+       background-color: #db162f;
+     }
+
+     .good, .bad {
+       border-top: 1em;
+       border-radius: 5px;
+       padding: 0.5em;
+       color: white;
+       max-width: 300px;
+     }
+
+     .question .explaination {
+       font-size: 1.3em;
+       padding: 0.5em;
+     }
 
 
 /* ##################################################################### */
