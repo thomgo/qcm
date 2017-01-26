@@ -7,12 +7,13 @@ $( document ).ready(function() {
   // When the user choose an answer it taken has userAnswer and seek for the answer with the right class
   function getAnswers() {
     $(".current input").focus(function (){
+      $(this).siblings().prop('checked', false);
       userAnswer = $(this).val();
       correctAnswer = $(".current .right").val();
       });
     }
 
-  // Clear the radio button
+  // Clear the radio button on the whole page
   $("input").prop('checked', false);
 
   // Add the value as text after the input to avoid to copy it in html and clear tags
@@ -69,7 +70,7 @@ $( document ).ready(function() {
 
       $(".next").click(function(){
         if($(this).parent(".question").index() === finalscore - 1) {
-          var godAnswer = (score/finalscore)*100 ;
+          var godAnswer = Math.round((score/finalscore)*100) ;
           var advice;
 
           if (godAnswer<50) {
