@@ -59,7 +59,7 @@ $( document ).ready(function() {
         $(".score p").html( score + "/" + finalscore );
       }
       else {
-        $(this).after("<p class='result wrong'>Mauvaise réponse</p>");
+        $(this).after("<p class='result bad'>Mauvaise réponse</p>");
       }
 
       // Show the explaination paragraphe and hide the validate button
