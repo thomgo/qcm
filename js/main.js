@@ -7,6 +7,7 @@ $( document ).ready(function() {
   // When the user choose an answer it taken has userAnswer and seek for the answer with the right class
   function getAnswers() {
     $(".current input").click(function (){
+      alert("test");
       $(this).siblings().prop('checked', false);
       userAnswer = $(this).val();
       correctAnswer = $(".current .right").val();
