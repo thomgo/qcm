@@ -36,9 +36,9 @@
       <article class="question">
           <p>A quoi sert le css ?</p>
 
-          <input type="radio" value="A rien">
-          <input class="right" type="radio" value="Il permet de mettre en forme notre HTML">
-          <input type="radio" value="Il stocke des données">
+          <input type="radio" onclick="getAnswers()" value="A rien"></input>
+          <input class="right" onclick="getAnswers()" type="radio" value="Il permet de mettre en forme notre HTML"></input>
+          <input type="radio" onclick="getAnswers()" value="Il stocke des données"></input>
           <button class="validate">Valider</button>
           <p class="explaination">Le CSS nous sert à styliser notre HTML, il gére les couleurs, le positionnement, les ombres et plein d'autres choses</p>
       </article>
@@ -46,9 +46,9 @@
       <article class="question">
           <p>Quelle est la couleur d'un cheval blanc ?</p>
 
-          <input class="right" type="radio" value="blanc">
-          <input type="radio" value="rouge">
-          <input type="radio" value="transparent">
+          <input class="right" onclick="getAnswers()" type="radio" value="blanc"></input>
+          <input type="radio" onclick="getAnswers()" value="rouge"></input>
+          <input type="radio" onclick="getAnswers()" value="transparent"></input>
 
           <button class="validate">Valider</button>
           <p class="explaination">Bah oui il est blanc !</p>
@@ -57,9 +57,9 @@
       <article class="question">
           <p>Combien font 2+2 ?</p>
 
-          <input type="radio" value="1">
-          <input type="radio" value="2">
-          <input class="right" type="radio" value="4">
+          <input type="radio" onclick="getAnswers()" value="1"></input>
+          <input type="radio" onclick="getAnswers()" value="2"></input>
+          <input class="right" onclick="getAnswers()" type="radio" value="4"></input>
 
           <button class="validate">Valider</button>
           <p class="explaination">Ca fait 4 rien de plus rien de moins</p>
